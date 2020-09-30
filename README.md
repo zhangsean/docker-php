@@ -1,6 +1,6 @@
 # zhangsean/php
 
-Offical `php:apache` with `mod_rewrite` enabled.
+Official `php:apache` with `mod_rewrite` enabled.
 
 [![DockerHub Badge](http://dockeri.co/image/zhangsean/php)](https://hub.docker.com/r/zhangsean/php/)
 
