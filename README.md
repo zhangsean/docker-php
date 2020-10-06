@@ -10,6 +10,10 @@ Official `php:apache` with `mod_rewrite` enabled and PHP `gd`, `pdo_mysql` ext i
 
 Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `pdo_mysql` ext installed.
 
+### 7-apache-oci
+
+Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `oci8`, `pdo_oci` ext installed.
+
 ### 7-apache-rw
 
 Official `php:7-apache` with `mod_rewrite` enabled.
