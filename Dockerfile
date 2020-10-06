@@ -3,7 +3,7 @@ RUN a2enmod rewrite \
  && echo "<?php phpinfo();" > /var/www/html/index.php \
  && apt-get update \
  && apt-get install -y libpng-dev unzip libaio1 \
- && curl -sSLO /tmp/instantclient_12_2.zip https://github.com/paulofellix/docker-php/raw/master/instantclient_12_2.zip \
+ && curl -sSLo /tmp/instantclient_12_2.zip https://download.oracle.com/otn/linux/instantclient/122010/instantclient-basic-linux.x64-12.2.0.1.0.zip?AuthParam=1601992015_ec064199411f7c23d1e39c6bc705024e \
  && unzip /tmp/instantclient_12_2.zip -d /usr/oracle/ && rm -f /tmp/instantclient_12_2.zip \
  && ln -s /usr/oracle/instantclient_12_2 /usr/oracle/instantclient \
  && ln -sf /usr/oracle/instantclient /sqlplus /usr/local/bin/ \
