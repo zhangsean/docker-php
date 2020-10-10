@@ -9,12 +9,10 @@ RUN a2enmod rewrite \
  && tar zxvf /tmp/redis.tar.gz \
  && rm -rf /tmp/redis.tar.gz \
  && mv phpredis-5.3.1 /usr/src/php/ext/redis \
- && curl -sSLo /tmp/instantclient_12_2.zip https://github.com/paulofellix/docker-php/raw/master/instantclient_12_2.zip \
- && unzip /tmp/instantclient_12_2.zip -d /usr/oracle/ \
- && rm -f /tmp/instantclient_12_2.zip \
- && ln -s /usr/oracle/instantclient_12_2 /usr/oracle/instantclient \
- && ln -sf /usr/oracle/instantclient/sqlplus /usr/local/bin/ \
- && ln -sf /usr/oracle/instantclient/libclntsh.so.12.1 /usr/oracle/instantclient/libclntsh.so \
+ && curl -sSLo /tmp/instantclient.zip https://download.oracle.com/otn_software/linux/instantclient/195000/instantclient-basic-linux.x64-19.5.0.0.0dbru.zip \
+ && unzip /tmp/instantclient.zip -d /usr/oracle/ \
+ && rm -f /tmp/instantclient.zip \
+ && ln -s /usr/oracle/instantclient_19_5 /usr/oracle/instantclient \
  && echo /usr/oracle/instantclient > /etc/ld.so.conf.d/oracle-instantclient.conf \
  && ldconfig \
  && docker-php-ext-configure oci8 --with-oci8=shared,instantclient,/usr/oracle/instantclient \
