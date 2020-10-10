@@ -1,6 +1,5 @@
 FROM php:7-apache
 ENV ORACLE_HOME=/usr/oracle/instantclient
-ENV LD_LIBRARY_PATH=/usr/oracle/instantclient
 RUN a2enmod rewrite \
  && echo "<?php phpinfo();" > /var/www/html/index.php \
  && apt-get update \
@@ -11,6 +10,8 @@ RUN a2enmod rewrite \
  && ln -s /usr/oracle/instantclient_12_2 /usr/oracle/instantclient \
  && ln -sf /usr/oracle/instantclient/sqlplus /usr/local/bin/ \
  && ln -sf /usr/oracle/instantclient/libclntsh.so.12.1 /usr/oracle/instantclient/libclntsh.so \
+ && echo /usr/oracle/instantclient > /etc/ld.so.conf.d/oracle-instantclient.conf \
+ && ldconfig \
  && docker-php-ext-configure oci8 --with-oci8=shared,instantclient,/usr/oracle/instantclient \
  && docker-php-ext-configure pdo_oci --with-pdo-oci=instantclient,/usr/oracle/instantclient,12.1 \
  && docker-php-ext-install gd oci8 pdo_oci \
