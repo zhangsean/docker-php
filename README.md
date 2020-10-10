@@ -12,7 +12,7 @@ Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `redis`, `mysql
 
 ### 7-apache-oci
 
-Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `redis`, `oci8`, `pdo_oci` ext installed, Oracle Instant Client Version `11.2`.
+Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `redis`, `oci8`, `pdo_oci` ext installed, Oracle Instant Client Version `12.2`.
 
 ### 7-apache-oci-19
 
