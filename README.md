@@ -1,6 +1,6 @@
 # zhangsean/php
 
-Official `php:apache` with `mod_rewrite` enabled and PHP `gd`, `pdo_mysql` ext installed.
+Official `php:apache` with `mod_rewrite` enabled and PHP `gd`, `oci8`, `pdo_oci`, `redis` ext installed.
 
 [![DockerHub Badge](http://dockeri.co/image/zhangsean/php)](https://hub.docker.com/r/zhangsean/php/)
 
@@ -12,7 +12,7 @@ Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `pdo_mysql` ext
 
 ### 7-apache-oci
 
-Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `oci8`, `pdo_oci` ext installed.
+Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `oci8`, `pdo_oci`, `redis` ext installed.
 
 ### 7-apache-rw
 
@@ -24,12 +24,12 @@ Official `php:7-apache` with `mod_rewrite` enabled.
 # Check phpinfo
 docker run -it --rm \
     -p 80:80 \
-    zhangsean/php:7-apache-mysql
+    zhangsean/php:7-apache-oci
 
 # Mount your php app with pod_mysql support.
 docker run -itd \
     --name php-app \
     -p 80:80 \
     -v ~/php-app:/var/www/html \
-    zhangsean/php:7-apache-mysql
+    zhangsean/php:7-apache-oci
 ```
