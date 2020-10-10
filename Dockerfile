@@ -10,8 +10,10 @@ RUN a2enmod rewrite \
  && rm -rf /tmp/redis.tar.gz \
  && mv phpredis-5.3.1 /usr/src/php/ext/redis \
  && curl -sSLo /tmp/instantclient.zip https://download.oracle.com/otn_software/linux/instantclient/195000/instantclient-basic-linux.x64-19.5.0.0.0dbru.zip \
+ && curl -sSLo /tmp/instantclient-sdk.zip https://download.oracle.com/otn_software/linux/instantclient/195000/instantclient-sdk-linux.x64-19.5.0.0.0dbru.zip \
  && unzip /tmp/instantclient.zip -d /usr/oracle/ \
- && rm -f /tmp/instantclient.zip \
+ && unzip /tmp/instantclient-sdk.zip -d /usr/oracle/ \
+ && rm -f /tmp/instantclient*.zip \
  && ln -s /usr/oracle/instantclient_19_5 /usr/oracle/instantclient \
  && echo /usr/oracle/instantclient > /etc/ld.so.conf.d/oracle-instantclient.conf \
  && ldconfig \
