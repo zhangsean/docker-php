@@ -1,6 +1,6 @@
 # zhangsean/php
 
-Official `php:apache` with `mod_rewrite` enabled and PHP `gd`, `pdo_mysql` ext installed.
+Official `php:apache` with `mod_rewrite` enabled and PHP `gd`, `oci8`, `pdo_oci`, `redis` ext installed.
 
 [![DockerHub Badge](http://dockeri.co/image/zhangsean/php)](https://hub.docker.com/r/zhangsean/php/)
 
@@ -8,7 +8,15 @@ Official `php:apache` with `mod_rewrite` enabled and PHP `gd`, `pdo_mysql` ext i
 
 ### 7-apache-mysql, latest
 
-Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `pdo_mysql` ext installed.
+Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `redis`, `mysqli`, `pdo_mysql` ext installed.
+
+### 7-apache-oci
+
+Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `redis`, `oci8`, `pdo_oci` ext installed, Oracle Instant Client Version `11.2`.
+
+### 7-apache-oci-19
+
+Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `redis`, `oci8`, `pdo_oci` ext installed, Oracle Instant Client Version `19.5`.
 
 ### 7-apache-rw
 
