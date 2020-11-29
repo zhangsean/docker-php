@@ -1,4 +1,4 @@
-FROM php:7-apache
+FROM php:7.3-apache
 RUN a2enmod rewrite \
  && echo "<?php phpinfo();" > /var/www/html/index.php \
  && apt-get update \
