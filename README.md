@@ -8,7 +8,7 @@ Official `php:apache` with `mod_rewrite` enabled and PHP `gd`, `oci8`, `pdo_oci`
 
 ### 7-apache-mysql, latest
 
-Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `redis`, `mysqli`, `pdo_mysql` ext installed.
+Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `zip`, `redis`, `mysqli`, `pdo_mysql` ext installed.
 
 ### 7-apache-oci
 
