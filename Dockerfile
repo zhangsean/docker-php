@@ -1,5 +1,5 @@
 FROM php:7-apache
-ENV PHPREDIS_VERSION=5.3.2
+ENV PHPREDIS_VERSION=5.3.4
 RUN a2enmod rewrite \
  && echo "<?php phpinfo();" > /var/www/html/index.php \
  && apt-get update \
