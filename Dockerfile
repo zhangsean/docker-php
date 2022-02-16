@@ -3,7 +3,7 @@ ENV PHPREDIS_VERSION=5.3.7
 RUN a2enmod rewrite \
  && echo "<?php phpinfo();" > /var/www/html/index.php \
  && apt-get update \
- && apt-get install -y libpng-dev \
+ && apt-get install -y libpng-dev libzip-dev \
  && curl -SLo /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/${PHPREDIS_VERSION}.tar.gz \
  && tar zxvf /tmp/redis.tar.gz \
  && rm -rf /tmp/redis.tar.gz \
