@@ -1,5 +1,5 @@
 FROM php:7.3-apache
-ENV PHPREDIS_VERSION=5.3.2
+ENV PHPREDIS_VERSION=5.3.7
 RUN a2enmod rewrite \
  && echo "<?php phpinfo();" > /var/www/html/index.php \
  && apt-get update \
@@ -9,6 +9,6 @@ RUN a2enmod rewrite \
  && rm -rf /tmp/redis.tar.gz \
  && mkdir -p /usr/src/php/ext \
  && mv phpredis-${PHPREDIS_VERSION} /usr/src/php/ext/redis \
- && docker-php-ext-install gd redis mysqli pdo_mysql \
+ && docker-php-ext-install gd redis mysqli pdo_mysql zip \
  && apt-get -y autoremove && apt-get clean all && apt-get autoclean \
  && rm -rf /var/lib/apt/lists/* && rm -rf /var/cache/debconf/* && rm -rf /tmp/*
