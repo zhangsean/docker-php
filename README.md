@@ -1,14 +1,10 @@
 # zhangsean/php
 
-Official `php:apache` with `mod_rewrite` enabled and PHP `gd`, `pdo_mysql` ext installed.
+Official `php:apache` with `mod_rewrite` enabled.
 
 [![DockerHub Badge](http://dockeri.co/image/zhangsean/php)](https://hub.docker.com/r/zhangsean/php/)
 
 ## Tags
-
-### 7-apache-mysql, latest
-
-Official `php:7-apache` with `mod_rewrite` enabled and PHP `gd`, `pdo_mysql` ext installed.
 
 ### 7-apache-rw
 
