@@ -1,14 +1,15 @@
 FROM php:7-apache
-ENV ORACLE_HOME=/usr/oracle/instantclient
+ENV ORACLE_HOME=/usr/oracle/instantclient \
+    PHPREDIS_VERSION=5.3.7
 RUN a2enmod rewrite \
  && echo "<?php phpinfo();" > /var/www/html/index.php \
  && apt-get update \
  && apt-get install -y libpng-dev unzip libaio1 \
  && docker-php-source extract \
- && curl -SLo /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/5.3.1.tar.gz \
+ && curl -SLo /tmp/redis.tar.gz https://github.com/phpredis/phpredis/archive/${PHPREDIS_VERSION}.tar.gz \
  && tar zxvf /tmp/redis.tar.gz \
  && rm -rf /tmp/redis.tar.gz \
- && mv phpredis-5.3.1 /usr/src/php/ext/redis \
+ && mv phpredis-${PHPREDIS_VERSION} /usr/src/php/ext/redis \
  && curl -sSLo /tmp/instantclient.zip https://download.oracle.com/otn_software/linux/instantclient/195000/instantclient-basic-linux.x64-19.5.0.0.0dbru.zip \
  && curl -sSLo /tmp/instantclient-sdk.zip https://download.oracle.com/otn_software/linux/instantclient/195000/instantclient-sdk-linux.x64-19.5.0.0.0dbru.zip \
  && unzip /tmp/instantclient.zip -d /usr/oracle/ \
