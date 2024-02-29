@@ -1,4 +1,4 @@
-FROM php:7-apache
+FROM php:apache
 ENV PHPREDIS_VERSION=5.3.7
 RUN a2enmod rewrite \
  && echo "<?php phpinfo();" > /var/www/html/index.php \
