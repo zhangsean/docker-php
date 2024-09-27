@@ -4,13 +4,11 @@ on:
   push:
     paths:
       - 'Dockerfile'
+      - '.github/workflows/*.yml'
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -35,4 +33,3 @@ jobs:
           push: true
           tags: |
             zhangsean/php:7-apache-mysql
-
