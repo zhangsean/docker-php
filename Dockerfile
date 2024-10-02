@@ -1,4 +1,4 @@
-FROM php:apache
+FROM php:7-apache
 ENV PHPREDIS_VERSION=5.3.7
 RUN a2enmod rewrite \
  && sed -i '/DocumentRoot/a \        php_admin_value open_basedir "/var/www/html"' /etc/apache2/sites-enabled/000-default.conf \
