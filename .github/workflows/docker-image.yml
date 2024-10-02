@@ -37,5 +37,5 @@ jobs:
           context: .
           push: true
           tags: |
-            latest
+            zhangsean/php:latest
             zhangsean/php:8-apache-mysql
