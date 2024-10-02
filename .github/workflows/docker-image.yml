@@ -9,11 +9,8 @@ on:
       - '.github/workflows/*.yml'
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@master
@@ -40,5 +37,4 @@ jobs:
           context: .
           push: true
           tags: |
-            zhangsean/php:latest
-            zhangsean/php:8-apache-mysql
+            zhangsean/php:7-apache-mysql
