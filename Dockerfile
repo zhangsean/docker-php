@@ -1,5 +1,5 @@
 FROM php:apache
-ENV PHPREDIS_VERSION=5.3.7
+ENV PHPREDIS_VERSION=6.1.0
 RUN a2enmod rewrite \
  && sed -i '/DocumentRoot/a \        php_admin_value open_basedir "/var/www/html"' /etc/apache2/sites-enabled/000-default.conf \
  && echo "<?php phpinfo();" > /var/www/html/index.php \
